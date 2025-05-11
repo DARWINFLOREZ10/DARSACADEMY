@@ -1,0 +1,135 @@
+/* ======= ESTILOS GENERALES ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to left bottom, #1a1a1a, #221f3f, #252266, #26238f, #2a20b8, #2f1cc5, #3516d3, #3c0be0, #3b0dd6, #3b0fcc, #3a11c2, #3912b8);
+    color: white;
+    min-height: 100vh;
+    padding-top: 160px;
+    /* Para dar espacio al header fijo */
+}
+
+/* ======= HEADER ======= */
+header {
+    width: 100%;
+    background-image: linear-gradient(to left bottom, #1a1a1a, #221f3f, #252266, #26238f, #2a20b8, #2f1cc5, #3516d3, #3c0be0, #3b0dd6, #3b0fcc, #3a11c2, #3912b8);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: white;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ======= FORMULARIO LOGIN ======= */
+.form-body {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(26, 26, 26, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.form-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 1em;
+}
+
+.login-form input::placeholder {
+    color: #cccccc;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3c0be0;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #2f1cc5;
+}
+
+/* ======= TEXTOS INFERIORES ======= */
+.text-1,
+.text-2 {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #dddddd;
+}
+
+.text-1 a,
+.text-2 a {
+    color: #8faaff;
+    text-decoration: none;
+}
+
+.text-1 a:hover,
+.text-2 a:hover {
+    text-decoration: underline;
+}

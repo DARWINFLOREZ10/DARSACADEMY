@@ -1,0 +1,144 @@
+/* ======= ESTILOS GENERALES ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to left bottom, #1a1a1a, #221f3f, #252266, #26238f, #2a20b8, #2f1cc5, #3516d3, #3c0be0);
+    color: white;
+    padding-top: 160px;
+    min-height: 100vh;
+}
+
+/* ======= HEADER ======= */
+header {
+    background-image: linear-gradient(to left bottom, #1a1a1a, #221f3f, #252266, #26238f, #2a20b8, #2f1cc5, #3516d3, #3c0be0);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ======= CONTENIDO PRINCIPAL ======= */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(26, 26, 26, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.container h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ======= TARJETAS DE PROYECTOS ======= */
+.project-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-description {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+/* ======= COMENTARIOS ======= */
+.comments-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.comment {
+    background-color: #1a1a1a;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #3c0be0;
+    border-radius: 5px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #6ea8ff;
+}
+
+.comment-text {
+    margin-top: 5px;
+    color: #dddddd;
+}
+
+/* ======= FORMULARIO DE COMENTARIOS ======= */
+.add-comment textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    border: none;
+    background-color: #333;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.add-comment button {
+    background-color: #3c0be0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-comment button:hover {
+    background-color: #5324f5;
+}

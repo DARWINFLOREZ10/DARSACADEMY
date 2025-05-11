@@ -1,0 +1,179 @@
+/* ====== RESET Y BASE ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to left bottom, #1a1a1a, #221f3f, #252266, #26238f, #2a20b8, #2f1cc5, #3516d3, #3c0be0, #3b0dd6, #3b0fcc, #3a11c2, #3912b8);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+}
+
+/* ====== NAVBAR PRINCIPAL ====== */
+header:first-of-type {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+header:first-of-type h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+header:first-of-type nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+header:first-of-type nav li {
+    margin: 5px 12px;
+}
+
+header:first-of-type nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+header:first-of-type nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ====== HEADER SECUNDARIO (TÍTULO DE LA PÁGINA) ====== */
+header:nth-of-type(2) {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header:nth-of-type(2) h1 {
+    font-size: 2.2em;
+    color: #00e0ff;
+    margin-bottom: 10px;
+}
+
+header:nth-of-type(2) nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+header:nth-of-type(2) nav a {
+    color: #00e0ff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 12px;
+}
+
+header:nth-of-type(2) nav a:hover {
+    text-decoration: underline;
+}
+
+/* ====== MAIN ====== */
+.fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.sala {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.sala h2 {
+    margin: 20px 0 10px;
+    font-size: 1.6em;
+    color: #ffffff;
+}
+
+.codigo {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #dddddd;
+}
+
+.codigo span {
+    font-weight: bold;
+    color: #00e0ff;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* ====== BOTONES ====== */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn--crear {
+    background-color: #0080ff;
+    color: white;
+}
+
+.btn--crear:hover {
+    background-color: #005fcc;
+    transform: scale(1.05);
+}
+
+.btn--unirse {
+    background-color: #00c9b7;
+    color: white;
+}
+
+.btn--unirse:hover {
+    background-color: #009e90;
+    transform: scale(1.05);
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 50px;
+}
