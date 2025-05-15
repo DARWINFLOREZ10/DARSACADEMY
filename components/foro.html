@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foro de Preguntas y Respuestas</title>
+    <link rel="stylesheet" href="/assets/css/components/foro.css">
+    <link rel="shortcut icon" href="/assets/img/logotipo_para_editar-removebg-preview.png">
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo"><img src="/assets/img/logotipo_texto_blanco.png" alt="" width="360" /></a>
+        <nav>
+            <ul>
+                <li><a href="/pages/components/login.html">Iniciar sesión</a></li>
+                <li><a href="/components/foro.html">Interacción académica</a></li>
+                <li><a href="/components/chat.html">Chat en tiempo real</a></li>
+                <li><a href="/components/llamadas.html">Comunicaciones virtuales</a></li>
+                <li><a href="/components/proyectos.html">Proyectos</a></li>
+                <li><a href="/components/contacto.html">Contacto</a></li>
+                <li><a href="/components/sobre.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="foro">
+        <!-- Pregunta 1 -->
+        <div class="bloque">
+            <div class="pregunta">
+                <strong>¿Para qué sirve el atributo "placeholder" en un input de HTML?</strong>
+            </div>
+
+            <div class="respuesta">
+                <p><strong>Respuesta: Usuario 1</strong></p>
+                <p>Placeholder se usa para mostrar un texto dentro del campo de entrada que desaparece cuando el usuario
+                    empieza a escribir. Es útil para dar una pista de lo que se debe escribir.</p>
+                <div class="puntuacion">
+                    Puntúa esta respuesta:
+                    <button onclick="puntuar(this, 1)">1</button>
+                    <button onclick="puntuar(this, 2)">2</button>
+                    <button onclick="puntuar(this, 3)">3</button>
+                    <button onclick="puntuar(this, 4)">4</button>
+                    <button onclick="puntuar(this, 5)">5</button>
+                    <div class="resultado"></div>
+                </div>
+            </div>
+
+            <div class="respuesta">
+                <p><strong>Respuesta: Usuario 2</strong></p>
+                <p>Sirve como una ayuda visual dentro del input, por ejemplo: placeholder="Escribe tu correo" muestra
+                    ese texto como guía antes de que el usuario escriba algo.</p>
+                <div class="puntuacion">
+                    Puntúa esta respuesta:
+                    <button onclick="puntuar(this, 1)">1</button>
+                    <button onclick="puntuar(this, 2)">2</button>
+                    <button onclick="puntuar(this, 3)">3</button>
+                    <button onclick="puntuar(this, 4)">4</button>
+                    <button onclick="puntuar(this, 5)">5</button>
+                    <div class="resultado"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="bloque">
+            <div class="pregunta">
+                <strong>¿Qué es una API y para qué se utiliza en desarrollo web?</strong>
+            </div>
+
+            <div class="respuesta">
+                <p><strong>Respuesta: Usuario 1</strong></p>
+                <p>Una API es una interfaz que permite que diferentes aplicaciones se comuniquen entre sí, como el
+                    frontend con el backend.</p>
+                <div class="puntuacion">
+                    Puntúa esta respuesta:
+                    <button onclick="puntuar(this, 1)">1</button>
+                    <button onclick="puntuar(this, 2)">2</button>
+                    <button onclick="puntuar(this, 3)">3</button>
+                    <button onclick="puntuar(this, 4)">4</button>
+                    <button onclick="puntuar(this, 5)">5</button>
+                    <div class="resultado"></div>
+                </div>
+            </div>
+
+            <div class="respuesta">
+                <p><strong>Respuesta: Usuario 2</strong></p>
+                <p>Las APIs permiten que una aplicación use funciones o datos de otra, como acceder a datos del clima o
+                    realizar pagos.</p>
+                <div class="puntuacion">
+                    Puntúa esta respuesta:
+                    <button onclick="puntuar(this, 1)">1</button>
+                    <button onclick="puntuar(this, 2)">2</button>
+                    <button onclick="puntuar(this, 3)">3</button>
+                    <button onclick="puntuar(this, 4)">4</button>
+                    <button onclick="puntuar(this, 5)">5</button>
+                    <div class="resultado"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function puntuar(btn, valor) {
+            const resultado = btn.parentElement.querySelector(".resultado");
+            resultado.textContent = "Puntuación seleccionada: " + valor;
+        }
+    </script>
+</body>
+
+</html>
