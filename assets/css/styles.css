@@ -74,12 +74,14 @@ nav li a:hover {
 .bienvenido img {
     max-width: 200px;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .bienvenido h2 {
     font-size: 2em;
     margin-bottom: 10px;
     color: white;
+    justify-content: center;
 }
 
 .bienvenido p {
