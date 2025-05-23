@@ -1,2 +1,0 @@
-darwin,darwinflorezcardenas@gmail.com,1234
-darwin,darwinflorez,1234
