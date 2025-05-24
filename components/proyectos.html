@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
-    <title>Mis Proyectos</title>
-    <link rel="stylesheet" href="/assets/css/components/proyecto.css">
-    <link rel="shortcut icon" href="/assets/img/logotipo_para_editar-removebg-preview.png  " type="image/x-png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mis Proyectos - Dars Academy</title>
+    <link rel="shortcut icon" href="/assets/img/logotipo_para_editar-removebg-preview.png" type="image/x-png" />
+    <link rel="stylesheet" href="/assets/css/components/proyecto.css" />
+</head>
 
 <body>
     <header>
@@ -16,40 +16,39 @@
             <ul>
                 <li><a href="/pages/components/login.html">Iniciar sesión</a></li>
                 <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/components/foro.html">Interacción académica</a></li>
-                <li><a href="/components/chat.html">Chat en tiempo real</a></li>
-                <li><a href="/components/llamadas.html">Comunicaciones virtuales</a></li>
+                <li><a href="/components/foro.html">Foro</a></li>
+                <li><a href="/components/chat.html">Chat</a></li>
+                <li><a href="/components/llamadas.html">Llamadas</a></li>
                 <li><a href="/components/proyectos.html">Proyectos</a></li>
                 <li><a href="/components/contacto.html">Contacto</a></li>
                 <li><a href="/components/sobre.html">Sobre nosotros</a></li>
             </ul>
         </nav>
     </header>
+
     <div class="container">
-        <h1>Mis Proyectos</h1>
+        <h1 class="container-title">Mis Proyectos</h1>
 
         <!-- Proyecto 1 -->
         <div class="project-card">
-            <div class="project-title">Titulo del proyecto</div>
+            <div class="project-title">Título del Proyecto 1</div>
             <div class="project-description">
-                Descripcion del proytecto:
+                Descripción del proyecto 1.
             </div>
 
             <div class="comments-section">
                 <h3>Comentarios</h3>
 
-                <!-- Comentarios existentes -->
                 <div class="comment">
                     <div class="comment-author">Usuario 1:</div>
-                    <div class="comment-text">comentario </div>
+                    <div class="comment-text">¡Buen trabajo!</div>
                 </div>
 
                 <div class="comment">
                     <div class="comment-author">Usuario 2:</div>
-                    <div class="comment-text">comentario :</div>
+                    <div class="comment-text">Interesante enfoque.</div>
                 </div>
 
-                <!-- Formulario para agregar nuevo comentario -->
                 <div class="add-comment">
                     <form>
                         <textarea placeholder="Escribe tu comentario..." rows="3" required></textarea>
@@ -63,14 +62,15 @@
         <div class="project-card">
             <div class="project-title">Proyecto 2</div>
             <div class="project-description">
-                descripcion proyecto 2 </div>
+                Descripción proyecto 2.
+            </div>
 
             <div class="comments-section">
                 <h3>Comentarios</h3>
 
                 <div class="comment">
                     <div class="comment-author">Usuario 1:</div>
-                    <div class="comment-text">comentario :</div>
+                    <div class="comment-text">Muy informativo.</div>
                 </div>
 
                 <div class="add-comment">
@@ -82,11 +82,40 @@
             </div>
         </div>
     </div>
-</body>
 
-</html>
+    <script>
+        // Agregar funcionalidad para añadir comentarios sin recargar la página
+        document.querySelectorAll('.add-comment form').forEach(form => {
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+                const textarea = form.querySelector('textarea');
+                const commentText = textarea.value.trim();
+                if (!commentText) return;
 
+                // Crear nuevo comentario
+                const commentSection = form.closest('.comments-section');
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
 
+                const authorDiv = document.createElement('div');
+                authorDiv.classList.add('comment-author');
+                authorDiv.textContent = 'Tú:';
+
+                const textDiv = document.createElement('div');
+                textDiv.classList.add('comment-text');
+                textDiv.textContent = commentText;
+
+                newComment.appendChild(authorDiv);
+                newComment.appendChild(textDiv);
+
+                // Insertar nuevo comentario antes del formulario
+                commentSection.insertBefore(newComment, form.parentElement);
+
+                // Limpiar textarea
+                textarea.value = '';
+            });
+        });
+    </script>
 </body>
 
 </html>

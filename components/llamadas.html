@@ -2,20 +2,23 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sala de Llamadas</title>
-    <link rel="stylesheet" href="/assets/css/components/llamadas.css">
-    <link rel="shortcut icon" href="/assets/img/logotipo_para_editar-removebg-preview.png" </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sala de Llamadas - Dars Academy</title>
+    <link rel="shortcut icon" href="/assets/img/logotipo_para_editar-removebg-preview.png" />
+    <link rel="stylesheet" href="/assets/css/components/llamadas.css" />
+</head>
+
+<body>
     <header>
         <h1>Dars Academy</h1>
         <nav>
             <ul>
                 <li><a href="/pages/components/login.html">Iniciar sesión</a></li>
                 <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/components/foro.html">Interacción académica</a></li>
-                <li><a href="/components/chat.html">Chat en tiempo real</a></li>
-                <li><a href="/components/llamadas.html">Comunicaciones virtuales</a></li>
+                <li><a href="/components/foro.html">Foro</a></li>
+                <li><a href="/components/chat.html">Chat</a></li>
+                <li><a href="/components/llamadas.html">Llamadas</a></li>
                 <li><a href="/components/proyectos.html">Proyectos</a></li>
                 <li><a href="/components/contacto.html">Contacto</a></li>
                 <li><a href="/components/sobre.html">Sobre nosotros</a></li>
@@ -23,32 +26,54 @@
         </nav>
     </header>
 
-<body>
-    <header>
-        <h1>Sala de Llamadas</h1>
-        <nav>
-            <ul>
-                <li><a href="#crear">Crear Sala</a></li>
-                <li><a href="#unirse">Unirse a Sala</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main>
+        <section class="card">
+            <h2>Sala de Llamadas</h2>
 
-    <main class="fondo">
-        <section class="sala">
-            <h2>Crear una Sala</h2>
-            <button class="btn btn--crear">Generar Código</button>
-            <p class="codigo">Código: <span>----</span></p>
+            <div style="margin-bottom: 2rem;">
+                <h3>Crear una Sala</h3>
+                <button id="btn-crear">Generar Código</button>
+                <p class="codigo">Código: <span id="codigo-generado">----</span></p>
+            </div>
 
-            <h2>Unirse a una Sala</h2>
-            <input type="text" class="input" placeholder="Ingresa el código">
-            <button class="btn btn--unirse">Unirse</button>
+            <div>
+                <h3>Unirse a una Sala</h3>
+                <input type="text" id="codigo-input" placeholder="Ingresa el código" />
+                <button id="btn-unirse">Unirse</button>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Sala de Llamadas</p>
+        <p>&copy; 2025 Dars Academy - Sala de Llamadas</p>
     </footer>
+
+    <script>
+        // Función para generar un código alfanumérico aleatorio de 6 caracteres
+        function generarCodigo() {
+            return Math.random().toString(36).substring(2, 8).toUpperCase();
+        }
+
+        const btnCrear = document.getElementById('btn-crear');
+        const codigoGenerado = document.getElementById('codigo-generado');
+        const btnUnirse = document.getElementById('btn-unirse');
+        const codigoInput = document.getElementById('codigo-input');
+
+        btnCrear.addEventListener('click', () => {
+            const codigo = generarCodigo();
+            codigoGenerado.textContent = codigo;
+        });
+
+        btnUnirse.addEventListener('click', () => {
+            const codigo = codigoInput.value.trim();
+            if (codigo.length === 6) {
+                alert(`Intentando unirse a la sala con código: ${codigo}`);
+                // Aquí puedes añadir lógica para unirse a la sala real
+            } else {
+                alert('Por favor ingresa un código válido de 6 caracteres.');
+            }
+        });
+    </script>
 </body>
 
 </html>
